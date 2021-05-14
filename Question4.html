@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question4</title>
+	 
+</head>
+<body>
+	<form name="vform" onsubmit="isValid()">
+          <input type="text" name="firstname" ><br>
+          <input type="check" name="checkme"   ><br>
+          <input type="submit" value="submit"/>
+    </form>
+
+   <script type="text/javascript">
+ 	 function isValid(){
+ 	 	var x=document.forms["vform"]["firstname"].value;
+ 	 	var y=document.forms["vform"]["checkme"].value;
+ 	 	if(x==""|| y=="")
+ 	 	{
+ 	 		alert("Data Must be inserted");
+ 	 		return false;
+ 	 	}
+ 	 	else{
+ 	 		alert("Data Inserted");
+ 	 		return true;
+ 	 	}
+ 	 }
+ </script>
+
+</body>
+</html>

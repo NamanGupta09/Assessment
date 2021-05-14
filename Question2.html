@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+
+<button onclick="myFunction()">Sort the Array</button>
+
+<p id="demo"></p>
+
+<script>
+var myFunction = function() {
+    var nums = [1,0,0,0,0,1,0,0,0,1];
+    var s = "";
+    let largestCount = 0;
+    let currentCount = 0;
+    for (let i = 0; i<nums.length; i++) {
+	s += nums[i].toString();
+	s += " ";
+        if (nums[i] === 0) {
+            currentCount = 0;
+        } else {
+            currentCount++;
+        };
+        if (currentCount > largestCount) largestCount = currentCount;
+    };
+    console.log(largestCount);
+    document.getElementById("demo").innerHTML = "Array values are: " + s + "<br/>" + "Maximum 1 present is: " + largestCount.toString();
+};
+
+
+</script>
+
+</body>
+</html>
